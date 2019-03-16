@@ -1,0 +1,14 @@
+<div>
+  <ul class="agent-cards">
+    <li class="card" *ngFor="let agent of agents | async">
+        <header class="card-header">
+          {{ agent.name }} | {{ agent.role}}
+        </header>
+        <section class="card-body">
+          <span>{{ agent.name | titlecase }}</span> detail comes here!
+        </section>
+    </li> 
+  </ul>
+  <button class="btn btn-agent no-border" (click)="createAgentHandler();">Add Agent</button>
+</div>
+

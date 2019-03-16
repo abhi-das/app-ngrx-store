@@ -1,0 +1,27 @@
+.btn {
+    
+    &.no-border {
+        border: none;
+    }
+    &.btn-default {
+        background: #c8c8c8;
+        padding: .5em;
+        color: #001001;
+        margin-right: .5em;
+    }
+    &.btn-customer {
+        background: blue;
+        padding: .3em .4em;
+        color: white;
+        font-weight: 700;
+    }
+    &.btn-agent {
+        background: orange;
+        padding: .3em .4em;
+        color: white;
+        font-weight: 700;
+    }
+}
+.text-center {
+    text-align: center;
+}

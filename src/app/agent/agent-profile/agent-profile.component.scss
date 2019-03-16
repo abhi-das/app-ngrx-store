@@ -1,0 +1,21 @@
+$cardCommonPadding: .5em;
+$cardWidth: 20em;
+
+.agent-cards {
+    list-style: none;
+    padding: 0;
+    & .card {
+        text-transform: capitalize;
+        border: 1px solid #e7e7e7;
+        width: $cardWidth;
+        display: inline-block;
+    }
+    & .card-header {
+        padding: $cardCommonPadding;
+        background: orange;
+    }
+    & .card-body {
+        padding: $cardCommonPadding;
+        min-height: 5em;
+    }
+}
