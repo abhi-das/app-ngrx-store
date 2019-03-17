@@ -7,6 +7,7 @@ import { CustomerProfileComponent } from './customer/customer-profile/customer-p
 import { AgentProfileComponent } from './agent/agent-profile/agent-profile.component';
 
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { appReducer } from './reducers';
 
 @NgModule({
@@ -22,7 +23,10 @@ import { appReducer } from './reducers';
     AppRouterModule,
     
     // store
-    StoreModule.forRoot(appReducer)
+    StoreModule.forRoot(appReducer),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
