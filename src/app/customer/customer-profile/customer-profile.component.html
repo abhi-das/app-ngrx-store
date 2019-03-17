@@ -2,7 +2,7 @@
   <ul class="customer-cards">
     <li class="card" *ngFor="let customer of customers | async">
         <header class="card-header">
-          {{ customer.name }} | {{ customer.role}}
+          {{ customer.name }} | {{ customer.role}} | {{ customer.custRefId }}
         </header>
         <section class="card-body">
           <span>{{ customer.name | titlecase }}</span> detail comes here!

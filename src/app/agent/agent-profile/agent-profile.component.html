@@ -2,13 +2,15 @@
   <ul class="agent-cards">
     <li class="card" *ngFor="let agent of agents | async">
         <header class="card-header">
-          {{ agent.name }} | {{ agent.role}}
+          {{ agent.name }} | {{ agent.role}} | {{agent.agRefId}}
         </header>
         <section class="card-body">
           <span>{{ agent.name | titlecase }}</span> detail comes here!
+          <button (click)="changeRoleHandler(agent.agRefId);">Change Role</button>
         </section>
     </li> 
   </ul>
   <button class="btn btn-agent no-border" (click)="createAgentHandler();">Add Agent</button>
+  <button class="btn btn-agent no-border" (click)="getLatestHandler();">Get Latest</button>
 </div>
 

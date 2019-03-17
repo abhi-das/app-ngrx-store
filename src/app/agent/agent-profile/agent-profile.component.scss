@@ -8,7 +8,7 @@ $cardWidth: 20em;
         text-transform: capitalize;
         border: 1px solid #e7e7e7;
         width: $cardWidth;
-        display: inline-block;
+        display: inline-table;
     }
     & .card-header {
         padding: $cardCommonPadding;

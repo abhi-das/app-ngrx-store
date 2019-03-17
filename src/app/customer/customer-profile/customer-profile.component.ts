@@ -15,12 +15,14 @@ import { Observable } from 'rxjs';
 export class CustomerProfileComponent implements OnInit {
 
   customers: Observable<CustomerProfileModel[]>;
+  refCounter: number;
 
   constructor(private store: Store<AppState>) {
     this.customers = this.store.select('customerReducer');
   }
 
   ngOnInit() {
+    this.refCounter = 10022;
   }
 
   createCustomerHandler() {
@@ -28,7 +30,7 @@ export class CustomerProfileComponent implements OnInit {
     let newCustomer = new CustActions.AddCustomer({
       name: 'test',
       role: 'customer',
-      custRefId: 10024,
+      custRefId: this.refCounter++,
       location: 'san deago'
     });
 

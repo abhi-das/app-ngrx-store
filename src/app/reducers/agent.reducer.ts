@@ -15,7 +15,16 @@ export const agentReducer =
 
             case AgentActions.ADD_AGENT :
                 return [...state, action.agentData];
-            
+
+            case AgentActions.CHANGE_ROLE :
+
+                let rr = state.map( rs => {
+                    rs.agRefId === action.agRefId ?
+                    state.splice(state.indexOf(rs), 1): null;
+                });
+
+                return state;
+
             default :
                 return state;
         }

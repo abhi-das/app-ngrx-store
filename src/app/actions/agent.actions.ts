@@ -3,6 +3,7 @@ import { AgentProfileModel } from '../models/agent-profile.model';
 
 export const ADD_AGENT = '[AGENT] Add';
 export const REMOVE_AGENT = '[AGENT] Remove';
+export const CHANGE_ROLE = '[AGENT] Change Role';
 
 export class AddAgent implements Action {
 
@@ -16,4 +17,10 @@ export class RemoveAgent implements Action {
     constructor(public agRefId: number) {}
 }
 
-export type AgentAction = AddAgent | RemoveAgent;
+export class ChangeRole implements Action {
+
+    readonly type = CHANGE_ROLE;
+    constructor(public agRefId: number) {}
+}
+
+export type AgentAction = AddAgent | RemoveAgent | ChangeRole;
